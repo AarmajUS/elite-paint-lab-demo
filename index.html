@@ -54,6 +54,31 @@ details p{margin:8px 0 2px}
 .stickybar .call{background:linear-gradient(90deg,var(--gold),#fff0c2,var(--gold));color:#171106}
 .stickybar .labb{border:1px solid rgba(232,196,118,.6);color:var(--gold2)}
 body{padding-bottom:64px}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.on{opacity:1;transform:none}
+h1.elite{background-size:220% 100%;animation:shine 5.5s linear infinite}
+@keyframes shine{to{background-position:220% 0}}
+.num{font-variant-numeric:tabular-nums}
+.manifesto{padding:30px 22px;border-radius:20px;background:radial-gradient(500px 220px at 50% 0,rgba(232,196,118,.16),transparent),#0b0906;border:1px solid #3a2c14;text-align:center;margin:18px 0}
+.manifesto .q{font-size:clamp(21px,5.6vw,29px);line-height:1.35;font-weight:800}
+.manifesto .q em{color:var(--gold);font-style:normal}
+.steps{display:flex;gap:8px;overflow-x:auto;padding:8px 2px 14px;-webkit-overflow-scrolling:touch}
+.step{flex:0 0 128px;background:linear-gradient(180deg,#141017,#0a090d);border:1px solid #2b2438;border-radius:16px;padding:14px 12px;text-align:center}
+.step .no{font-size:24px;font-weight:900;color:var(--gold)}
+.step b{display:block;margin:6px 0 3px;font-size:13.5px;letter-spacing:.06em}
+.step p{font-size:11.5px;color:var(--mut);margin:0;line-height:1.45}
+.shot .idx{position:absolute;top:10px;left:12px;z-index:2;font-weight:900;font-size:13px;color:#fff;background:rgba(5,4,6,.55);border:1px solid rgba(232,196,118,.6);padding:4px 9px;border-radius:999px;backdrop-filter:blur(4px)}
+.wipe{position:relative;border-radius:14px;overflow:hidden;height:320px;margin-top:10px;touch-action:none;user-select:none}
+.wipe img{position:absolute;inset:0}
+.wipe .top{clip-path:inset(0 45% 0 0)}
+.wipe .bar{position:absolute;top:0;bottom:0;left:55%;width:3px;background:var(--gold);box-shadow:0 0 18px rgba(232,196,118,.8)}
+.wipe .knob{position:absolute;top:50%;left:55%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:linear-gradient(180deg,#fff0c2,#e8c476);color:#171106;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:15px;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+.wipe .tag{position:absolute;top:10px;font-size:11px;font-weight:900;letter-spacing:.12em;background:rgba(5,4,6,.6);padding:5px 9px;border-radius:999px}
+.founderphoto{width:100%;height:300px;object-fit:cover;border-radius:14px;margin-bottom:12px}
+@media (max-width:520px){.founder{grid-template-columns:64px 1fr}.avatar{width:64px;height:64px;font-size:19px}}
+.secno{color:var(--gold);font-size:12px;letter-spacing:.3em;font-weight:900}
+
 </style></head><body>
 
 <header class="hero">
@@ -64,7 +89,7 @@ body{padding-bottom:64px}
 <h1 class="elite">ELITE</h1>
 <div class="sub">AUTO CARE <em>609</em> — Paint Correction &amp; Ceramic Atelier</div>
 <p>This is not a car wash. This is <b>20,000+ hours of polishing mastery</b>, poured into paint — by hand, by eye, by obsession. Luxury cars don’t come here by accident.</p>
-<div class="badges"><span class="badge">✦ 20K+ POLISHING HOURS</span><span class="badge">✦ 500+ SATISFIED CUSTOMERS</span><span class="badge">✦ 5-YEAR CERAMIC WARRANTY</span><span class="badge">✦ LUXURY SPECIALIST</span></div>
+<div class="badges"><span class="badge">✦ <span class="num" data-count="20000">0</span>+ POLISHING HOURS</span><span class="badge">✦ <span class="num" data-count="500">0</span>+ SATISFIED CUSTOMERS</span><span class="badge">✦ 5-YEAR CERAMIC WARRANTY</span><span class="badge">✦ LUXURY SPECIALIST</span></div>
 <a class="cta" href="#lab">ENTER THE PAINT LAB ↓</a>
 <a class="cta2" href="tel:+16092460879">or call (609) 246-0879</a>
 <p class="small" style="text-align:left;letter-spacing:.14em;font-weight:800;color:#d9c58a">BY APPOINTMENT ONLY — NO ASSEMBLY LINE. EVERY CAR GETS SIMON HIMSELF.</p>
@@ -77,14 +102,27 @@ body{padding-bottom:64px}
 <h2>His work. <span>Not stock photos.</span></h2>
 <p class="mut">Every photo below is from Elite Auto Care’s own gallery — real cars, real paint, real hands. Swipe 👉</p>
 <div class="gallery">
-<div class="shot"><figure><img alt="Rolls-Royce hood ornament detailed by Elite Auto Care" src="assets/rolls.jpg"></figure><figcaption><b>Rolls-Royce, treated like jewellery</b><p>When the badge alone is worth more than most cars, you don’t trust it to a tunnel wash. Simon’s clientele doesn’t.</p></figcaption></div>
-<div class="shot"><figure><img alt="Porsche interior detailed by Elite Auto Care" src="assets/porsche.jpg"></figure><figcaption><b>Porsche cockpit, surgically clean</b><p>Interiors restored surface by surface — leather, stitching, screens — until it smells, feels and looks new again.</p></figcaption></div>
-<div class="shot"><figure><img alt="BMW M car in Elite Auto Care garage" src="assets/bmw.jpg"></figure><figcaption><b>M cars live here</b><p>Performance paint under garage lights tells the truth. This is the standard his correction work is judged at — and passes.</p></figcaption></div>
-<div class="shot"><figure><img alt="Black convertible sports car with red interior detailed by Elite Auto Care" src="assets/convertible.jpg"></figure><figcaption><b>Drop-top, red guts, mirror paint</b><p>Black paint is the hardest exam in detailing. Swirls have nowhere to hide — and here, neither do results.</p></figcaption></div>
-<div class="shot"><figure><img alt="Foam wash in progress at Elite Auto Care" src="assets/foam.jpg"></figure><figcaption><b>The process behind the shine</b><p>Snow-foam, decontamination, machine correction, then protection. No shortcuts — that’s why the finish lasts years, not weekends.</p></figcaption></div>
+<div class="shot"><span class="idx">01</span><figure><img alt="Rolls-Royce hood ornament detailed by Elite Auto Care" src="assets/rolls.jpg"></figure><figcaption><b>Rolls-Royce, treated like jewellery</b><p>When the badge alone is worth more than most cars, you don’t trust it to a tunnel wash. Simon’s clientele doesn’t.</p></figcaption></div>
+<div class="shot"><span class="idx">02</span><figure><img alt="Porsche interior detailed by Elite Auto Care" src="assets/porsche.jpg"></figure><figcaption><b>Porsche cockpit, surgically clean</b><p>Interiors restored surface by surface — leather, stitching, screens — until it smells, feels and looks new again.</p></figcaption></div>
+<div class="shot"><span class="idx">03</span><figure><img alt="BMW M car in Elite Auto Care garage" src="assets/bmw.jpg"></figure><figcaption><b>M cars live here</b><p>Performance paint under garage lights tells the truth. This is the standard his correction work is judged at — and passes.</p></figcaption></div>
+<div class="shot"><span class="idx">04</span><figure><img alt="Black convertible sports car with red interior detailed by Elite Auto Care" src="assets/convertible.jpg"></figure><figcaption><b>Drop-top, red guts, mirror paint</b><p>Black paint is the hardest exam in detailing. Swirls have nowhere to hide — and here, neither do results.</p></figcaption></div>
+<div class="shot"><span class="idx">05</span><figure><img alt="Foam wash in progress at Elite Auto Care" src="assets/foam.jpg"></figure><figcaption><b>The process behind the shine</b><p>Snow-foam, decontamination, machine correction, then protection. No shortcuts — that’s why the finish lasts years, not weekends.</p></figcaption></div>
+<div class="shot"><span class="idx">06</span><figure><img alt="Black BMW coupe under the hexagon light in Elite Auto Care bay" src="assets/shop.jpg"></figure><figcaption><b>The bay — where black paint confesses</b><p>Under the hexagon light, every swirl tells the truth. The mirror hood in this shot is the verdict after correction.</p></figcaption></div>
+<div class="shot"><span class="idx">07</span><figure><img alt="Simon Mowla detailing a silver Rolls-Royce Ghost at dusk" src="assets/rolls2.jpg"></figure><figcaption><b>The man himself, at work</b><p>Simon, crouched at a Rolls-Royce Ghost at dusk, on the owner's own driveway. Mobile service, atelier standard.</p></figcaption></div>
 </div>
 <p class="small">Photos: Elite Auto Care public gallery, eliteautocare609.com</p>
 
+<div class="manifesto rv"><div class="q">“A car wash <em>maintains</em> a car.<br>Correction <em>restores</em> it.<br>Most shops wash. <em>Simon corrects.</em>”</div>
+<p class="small" style="margin-top:10px">— the Elite standard, in his own shop's words</p></div>
+
+<h2><span class="secno">THE PROCESS</span><br>Five stages. <span>No shortcuts.</span></h2>
+<div class="steps">
+<div class="step"><div class="no">01</div><b>FOAM</b><p>Snow-foam lifts grit off the paint before anything touches it</p></div>
+<div class="step"><div class="no">02</div><b>DECON</b><p>Iron, tar and baked-in minerals chemically stripped</p></div>
+<div class="step"><div class="no">03</div><b>CORRECT</b><p>Machine polishing, panel by panel, until defects are gone</p></div>
+<div class="step"><div class="no">04</div><b>COAT</b><p>Ceramic protection laid over corrected paint — and only then</p></div>
+<div class="step"><div class="no">05</div><b>WARRANTY</b><p>Backed in writing for 5 years. That's the standard</p></div>
+</div>
 <div class="marques"><span>THE METAL THAT TRUSTS HIM</span>FERRARI ✦ ROLLS-ROYCE ✦ PORSCHE ✦ SHELBY ✦ CADILLAC V ✦ BMW M</div>
 <div class="marques"><span>TOOLS OF THE TRADE — HIS OWN BENCH</span>RUPES BIGFOOT ✦ DETAIL KING ✦ KOCH-CHEMIE</div>
 
@@ -105,8 +143,13 @@ body{padding-bottom:64px}
 
 <div class="card"><h3 style="margin-top:0">Before → After, in your hand</h3>
 <p class="mut">Drag it. Left: tired paint. Right: corrected, coated, Elite-finished.</p>
-<input type="range" id="baRange" min="0" max="100" value="35" oninput="ba(this.value)">
-<div style="border-radius:14px;overflow:hidden;height:300px;margin-top:10px"><img id="baImg" alt="Elite Auto Care finished car" src="assets/hero.jpg"></div>
+<div class="wipe" id="wipe">
+<img alt="Elite Auto Care finished car, corrected gloss" src="assets/hero.jpg">
+<img class="top" id="wipeTop" alt="Same car before correction, dull and swirled" src="assets/hero.jpg" style="filter:saturate(.45) contrast(.82) brightness(.68)">
+<div class="tag" style="left:10px">BEFORE</div><div class="tag" style="right:10px;color:var(--gold2)">AFTER</div>
+<div class="bar" id="wipeBar"></div><div class="knob" id="wipeKnob">⇔</div>
+</div>
+<input type="range" id="baRange" min="0" max="100" value="55" oninput="ba(this.value)" style="margin-top:12px">
 <p id="baTxt" style="font-weight:800">◐ Gloss returning…</p></div>
 
 <div class="card"><h3 style="margin-top:0">Paint Health Score</h3>
@@ -132,7 +175,7 @@ body{padding-bottom:64px}
 <div class="coupon"><div style="font-size:26px;font-weight:900;color:var(--gold)">15% OFF</div>
 <p style="margin:4px 0"><b>Military &amp; First Responders</b> — active duty, veterans, police, fire, EMT.<br>Elite's standing thank-you. Mention it when you book.</p></div>
 
-<div class="card"><div class="founder"><div class="avatar">SM</div><div>
+<div class="card"><img class="founderphoto" alt="Simon Mowla at work on a Rolls-Royce Ghost at dusk" src="assets/rolls2.jpg"><div class="founder"><div class="avatar">SM</div><div>
 <div class="stars">★★★★★</div>
 <b style="font-size:18px">Simon Mowla — Founder, Owner &amp; Operator</b>
 <p style="margin:4px 0">Started Elite Auto Care in 2018 after working for some of the biggest names in detailing. His rule, in his own words: best-quality materials, up-to-date tools, customer satisfaction as the main priority. 500+ customers later, the work still speaks first.</p>
@@ -150,8 +193,17 @@ body{padding-bottom:64px}
 <div class="stickybar"><a class="call" href="tel:+16092460879">📞 CALL SIMON</a><a class="labb" href="#lab">ENTER PAINT LAB ↓</a></div>
 <script>
 function d(t,x){document.getElementById('defect').innerHTML='<b>'+t+':</b> '+x}
-function ba(v){let img=document.getElementById('baImg');let f=.35+ (v/100)*.85;img.style.filter='saturate('+f+') contrast('+(0.75+v/100*0.45)+') brightness('+(0.72+v/100*0.38)+')';document.getElementById('baTxt').textContent=v>65?'✨ CORRECTED — deep gloss, ceramic-protected, Elite standard':v>30?'◐ Gloss returning…':'☁️ Dull, swirled, unprotected'}
-ba(35);
+function ba(v){let t=document.getElementById('wipeTop');if(t){t.style.clipPath='inset(0 '+(100-v)+'% 0 0)';document.getElementById('wipeBar').style.left=v+'%';document.getElementById('wipeKnob').style.left=v+'%'}document.getElementById('baTxt').textContent=v>65?'✨ CORRECTED — deep gloss, ceramic-protected, Elite standard':v>30?'◐ Gloss returning…':'☁️ Dull, swirled, unprotected'}
+ba(55);
+const wv=document.getElementById('wipe');let drag=false;
+function setWipe(x){let r=wv.getBoundingClientRect();let v=Math.max(2,Math.min(98,(x-r.left)/r.width*100));document.getElementById('baRange').value=v;ba(v)}
+wv.addEventListener('pointerdown',e=>{drag=true;wv.setPointerCapture(e.pointerId);setWipe(e.clientX)});
+wv.addEventListener('pointermove',e=>{if(drag)setWipe(e.clientX)});
+wv.addEventListener('pointerup',()=>drag=false);
+document.querySelectorAll('[data-count]').forEach(el=>{let target=+el.dataset.count,t0=null;function tick(t){if(!t0)t0=t;let p=Math.min(1,(t-t0)/1400);el.textContent=Math.floor(target*(0.2+0.8*p*p)).toLocaleString();if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.card,.manifesto,h2,.shot').forEach(el=>{el.classList.add('rv');io.observe(el)});
+
 function sc(){let s=+q1.value+ +q2.value+ +q3.value;let r=s<=2?'Stage 2 correction + ceramic is your move.':s<=4?'Stage 1 correction, ceramic strongly advised.':'Enhancement polish + ceramic will bring it back.';document.getElementById('score').innerHTML='<div class="score">'+Math.round(s/6*100)+'/100</div><p>'+r+'</p>'}
 function pr(){let b=(+st.value+ +ct.value)* +sz.value;let lo=Math.round(b*.9/10)*10,hi=Math.round(b*1.2/10)*10;document.getElementById('price').innerHTML='<div class="price">$'+lo.toLocaleString()+' – $'+hi.toLocaleString()+'</div><p>You saw the range before you enquired — no surprise-quote games, ever.</p>'}
 </script></body></html>

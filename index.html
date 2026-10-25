@@ -45,6 +45,10 @@ button.gold{background:linear-gradient(90deg,var(--gold),#fff0c2,var(--gold));co
 .marques span{color:#6f6350;font-size:10.5px;display:block;letter-spacing:.3em}
 .film{border-radius:18px;overflow:hidden;border:1px solid #2b2438}
 .film video{width:100%;display:block;aspect-ratio:9/16;max-height:560px;object-fit:cover;background:#000}
+details{background:#0d0b10;border:1px solid #2b2438;border-radius:14px;padding:12px 14px;margin:10px 0}
+details summary{font-weight:800;cursor:pointer;color:var(--gold2)}
+details p{margin:8px 0 2px}
+.coupon{border:1.5px dashed rgba(232,196,118,.65);border-radius:16px;padding:16px;text-align:center;background:linear-gradient(180deg,#171106,#0d0b10)}
 .stickybar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(5,4,6,.88);backdrop-filter:blur(10px);border-top:1px solid #2a2113}
 .stickybar a{flex:1;text-align:center;text-decoration:none;border-radius:12px;padding:13px;font-weight:900;font-size:14.5px}
 .stickybar .call{background:linear-gradient(90deg,var(--gold),#fff0c2,var(--gold));color:#171106}
@@ -82,6 +86,7 @@ body{padding-bottom:64px}
 <p class="small">Photos: Elite Auto Care public gallery, eliteautocare609.com</p>
 
 <div class="marques"><span>THE METAL THAT TRUSTS HIM</span>FERRARI ✦ ROLLS-ROYCE ✦ PORSCHE ✦ SHELBY ✦ CADILLAC V ✦ BMW M</div>
+<div class="marques"><span>TOOLS OF THE TRADE — HIS OWN BENCH</span>RUPES BIGFOOT ✦ DETAIL KING ✦ KOCH-CHEMIE</div>
 
 <h2>The film <span>— his work, moving</span></h2>
 <p class="mut">Forty-four seconds. His cars, his hands, his standard — the exact film this system makes for him every week. Sound on 🔊</p>
@@ -117,6 +122,16 @@ body{padding-bottom:64px}
 <button class="gold" onclick="pr()">SHOW MY BALLPARK</button><p id="price"></p>
 <p class="small">Ballpark only — Simon confirms the final price at inspection after reading your paint. That honesty protects you both.</p></div>
 
+<h2>Questions, <span>answered straight</span></h2>
+<p class="mut">From Elite's own playbook — the answers Simon gives every customer, now working for him 24/7.</p>
+<details><summary>Why not just use a regular car wash?</summary><p>Automatic brushes and harsh chemicals are exactly what put swirls and fine scratches into clear coat — then strip whatever protection was there. Elite treats paint as a craft: specialised tools, gentle methodical technique, and chemistry matched to your paint, clear coat and interior surfaces. A wash maintains a car. Correction restores it.</p></details>
+<details><summary>Why does the 5-year ceramic warranty matter?</summary><p>Because a coating is a real investment, and a warranty is the maker standing behind it in writing: the gloss, water behaviour and protection have to keep performing for years — not weekends. A multi-year warranty is proof the application was done properly, with the right prep underneath it.</p></details>
+<details><summary>Mobile detailing — does the quality drop?</summary><p>No. The mobile unit carries the same professional equipment, products and process to your home or office — the full Elite standard, without you losing half a day to drop-off and pickup. Your day stays uninterrupted; your car still gets undivided attention.</p></details>
+<details><summary>How does pricing work — and is it honest?</summary><p>Paint has to be read before it can be priced: condition, defect severity and your goal decide the correction level. Get your instant ballpark above, Simon confirms the exact price at inspection, and price-matching is available on verified estimates. No surprises, no pressure.</p></details>
+
+<div class="coupon"><div style="font-size:26px;font-weight:900;color:var(--gold)">15% OFF</div>
+<p style="margin:4px 0"><b>Military &amp; First Responders</b> — active duty, veterans, police, fire, EMT.<br>Elite's standing thank-you. Mention it when you book.</p></div>
+
 <div class="card"><div class="founder"><div class="avatar">SM</div><div>
 <div class="stars">★★★★★</div>
 <b style="font-size:18px">Simon Mowla — Founder, Owner &amp; Operator</b>
@@ -125,7 +140,7 @@ body{padding-bottom:64px}
 
 <div class="card" style="text-align:center">
 <h3 style="margin-top:0;font-size:22px">Your paint has a score.<br>Elite raises it.</h3>
-<p>Book a paid inspection — deposit credited in full toward your job. Shop in Absecon, or mobile at your home / office across South Jersey.</p>
+<p>Book a paid inspection — deposit credited in full toward your job. Shop in Absecon, or mobile at your home / office. Serving Atlantic, Burlington, Camden, Cumberland &amp; Salem counties.</p>
 <a class="cta" href="tel:+16092460879">BOOK — (609) 246-0879</a>
 <p class="small" style="margin-top:12px">408 E Absecon Blvd, Absecon, NJ 08201 · Mon–Fri 9–5 · 15% off for military &amp; first responders</p>
 </div>
